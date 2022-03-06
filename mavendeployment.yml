@@ -10,8 +10,8 @@ spec:
   template:
     metadata:
       name: mavenwebpod
-       labels:
-         app: mavenwebapp
+      labels:
+        app: mavenwebapp
     spec:
       containers:
       - name: mavenwebappcontainer
