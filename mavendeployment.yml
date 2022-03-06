@@ -13,8 +13,7 @@ spec:
     rollingUpdate:
       maxUnavailable: 1
       maxSurge: 1 
-      **/
-  minReadySeconds: 30
+  minReadySeconds: 30 **/
   template:
     metadata: 
       name: mavenwebapppod
