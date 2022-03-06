@@ -6,25 +6,24 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-	  app: mavenwebapp
+      app: mavenwebapp
   strategy:
-    type: rollingUpdate
-	rollingUpdate:
-	  maxUnavailable: 1
-	  maxSurge: 1
-	minReadySeconds: 30
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  minReadySeconds: 30
   template:
-    matadata: 
-	  name: mavenwebapppod
-	  labels:
-	    app: mavenwebapp
-	spec:
-	  containers:
-	  - name: mavenwebappcontainer
-	    image: ayyappa376/mavenweb
-        ports:
-        - containerPort: 80	
-		
+    metadata: 
+      name: mavenwebapppod
+      labels:
+       app: mavenwebapp
+    spec:
+      containers:
+      - name: mavenwebappcontainer
+        image: ayyappa376/mavenweb
+	ports:
+	- containerPort: 80	
 ---
 apiVersion: v1
 kind: Service
