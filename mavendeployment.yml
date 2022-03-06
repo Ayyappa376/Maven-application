@@ -23,7 +23,7 @@ spec:
       - name: mavenwebappcontainer
         image: ayyappa376/mavenweb
         ports:
-        - containerPort: 80
+        - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
