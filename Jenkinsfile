@@ -17,6 +17,7 @@ node
         }
         stage('kubernetes deploy'){
 		    withKubeConfig(credentialsId: 'kubeconfug') {
+             sh "kubectl delete all --all"
              sh "kubectl apply -f mavendeployment.yml"
           }
 	    	
