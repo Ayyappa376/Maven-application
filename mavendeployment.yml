@@ -8,8 +8,8 @@ spec:
     matchLabels:
       app: mavenwebapp
   template:
-    metadata: 
-      name: mavenwebapppod
+    metadata:
+      name: mavenwebpod
       labels:
        app: mavenwebapp
     spec:
